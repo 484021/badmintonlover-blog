@@ -37,7 +37,7 @@ export default function NavbarAlt(props) {
       href: "/contact"
     },
     {
-      label: "All Posts",
+      label: "Archive",
       href: "/archive"
     }
 
