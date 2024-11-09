@@ -68,16 +68,16 @@ export default function Navbar(props) {
         }
       ]
     },
-    {
-      label: "Free Version",
-      href: "https://stablo.web3templates.com/",
-      external: true
-    },
-    {
-      label: "Purchase",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
-    }
+    // {
+    //   label: "Free Version",
+    //   href: "https://stablo.web3templates.com/",
+    //   external: true
+    // },
+    // {
+    //   label: "Purchase",
+    //   href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
+    //   external: true
+    // }
   ];
 
   const mobilemenu = [...leftmenu, ...rightmenu];

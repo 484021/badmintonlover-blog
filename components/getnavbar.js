@@ -9,6 +9,8 @@ export default function GetNavbar(props) {
   const altnav = pathname === "/home/minimal";
 
   return (
-    <>{altnav ? <NavbarAlt {...props} /> : <Navbar {...props} />}</>
+    // <>{altnav ? <NavbarAlt {...props} /> : <Navbar {...props} />}</>
+    <NavbarAlt {...props} />
+
   );
 }
