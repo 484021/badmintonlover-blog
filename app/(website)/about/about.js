@@ -13,7 +13,7 @@ export default function About({ authors, settings }) {
         <p className="text-lg">We are doing this out of the love for Badminton. We want to more people in the world to play and enjoy Badminton. Our goal is to promote Badminton to the world.</p>
       </div>
 
-      <div className="grid grid-cols-1 mb-16 gap-5 md:mb-32 md:gap-16">
+      <div className=" mb-16 mt-6 gap-5 md:mb-32 md:mt-16 md:gap-16">
         {authors.slice(0, 3).map(author => {
           const imageProps = urlForImage(author?.image) || null;
           return (
