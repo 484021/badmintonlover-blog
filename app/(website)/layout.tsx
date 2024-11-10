@@ -6,6 +6,7 @@ import { getSettings } from "@/lib/sanity/client";
 import Footer from "@/components/footer";
 import GetNavbar from "@/components/getnavbar";
 import { urlForImage } from "@/lib/sanity/image";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,14 +26,12 @@ export async function sharedMetaData(params) {
     title: {
       default:
         settings?.title ||
-        "Stablo Pro - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+        "Badminton Lover - World's best badminton blog",
+      template: "%s"
     },
-    description:
-      settings?.description ||
-      "Pro version of Stablo, popular open-source next.js and sanity blog template",
-    keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+    description: settings?.description || "",
+    keywords: ["Badminton", "Yonex", "Rackets"],
+    authors: [{ name: "Santhosh Bhoopal" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -46,7 +45,7 @@ export async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Badminton Lover",
       card: "summary_large_image"
     },
     robots: {
@@ -73,6 +72,7 @@ export default async function Layout({ children, params }) {
           <div>{children}</div>
           <Footer {...settings} />
         </Providers>
+        <GoogleAnalytics gaId="G-PFSVNFVPTR" />
       </body>
     </html>
   );
